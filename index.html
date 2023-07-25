@@ -3,9 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fruit Burst</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+    <header>
+        <nav x-data="{ isOpen: false }" class="relative bg-white dark:bg-gray-800">
+            <div class="container mt-12 px-12 py-8 mx-auto md:flex md:items-center md:justify-between md:bg-[#F85559] md:rounded-full ">
+                
+                <!-- Logo Branding  -->
+                <div class="order-2 flex gap-4 items-center justify-between">
+                    <a href="#" class="flex md:order-2 items-center gap-4 md:text-white text-xl md:text-4xl font-bold">
+                        <img class="shrink-0 w-[54.517px] h-[60px]" src="./images/logo.png" alt="Fruit Burst">
+                        Fruit Burst</a>
+        
+                    <!-- Mobile menu button -->
+                    <div class="flex md:order-1 xl:hidden">
+                        <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                            </svg>
+                    
+                            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+        
+                <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+                <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="order-1 absolute inset-x-0 z-20 px-6 py-4 transition-all duration-300 ease-in-out bg-white xl:bg-inherit dark:bg-gray-800 xl:mt-0 xl:p-0 xl:top-0 xl:relative xl:opacity-100 xl:translate-x-0 xl:flex xl:items-center xl:justify-between">
+                    <div class="flex font-medium text-lg flex-col px-2 -mx-4 xl:flex-row xl:py-0">
+                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-white hover:text-gray-900 dark:hover:bg-gray-700 xl:mx-2">Home</a>
+                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-white hover:text-gray-900 dark:hover:bg-gray-700 xl:mx-2">About Us</a>
+                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-white hover:text-gray-900 dark:hover:bg-gray-700 xl:mx-2">Shop</a>
+                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-white hover:text-gray-900 dark:hover:bg-gray-700 xl:mx-2">All Fruits</a>
+                    </div>
+        
+                    <!-- Search Bar for Small Device  -->
+                    <div class="relative mt-4 md:hidden">                      
+                        <input type="text" class="w-full py-2 pl-4 pr-10 text-gray-700 bg-white border rounded-full dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search">
     
+                        <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                            <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Search Bar from Medium Device  -->
+                <div class="order-3 relative hidden md:block md:mt-0">                      
+                    <input type="text" class="w-full py-4 pl-4 pr-10 text-gray-700 font-normal text-base bg-white rounded-full dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search here">
+
+                    <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                        <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <div class="container bg-red-100">
+        <section class="section1-hero-slider"></section>
+        <section class="section2"></section>
+        <section class="section3"></section>
+        <section class="section4"></section>
+    </div>
+
+    <footer>
+        <div class="footer1"></div>
+        <div class="footer2"></div>
+        <div class="footer3"></div>
+    </footer>
 </body>
 </html>
