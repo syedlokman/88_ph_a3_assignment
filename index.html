@@ -11,8 +11,8 @@
 </head>
 <body>
     <header>
-        <nav x-data="{ isOpen: false }" class="relative bg-white dark:bg-gray-800">
-            <div class="container mt-12 px-12 py-8 mx-auto md:flex md:items-center md:justify-between md:bg-[#F85559] md:rounded-full ">
+        <nav x-data="{ isOpen: false }" class="relative mx-5 bg-white dark:bg-gray-800">
+            <div class="container mt-12 px-12 py-8 mx-auto md:bg-[#F85559] md:rounded-full md:flex md:items-center md:justify-between">
                 
                 <!-- Logo Branding  -->
                 <div class="order-2 flex gap-4 items-center justify-between">
@@ -23,11 +23,11 @@
                     <!-- Mobile menu button -->
                     <div class="flex md:order-1 xl:hidden">
                         <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
-                            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="black" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
                             </svg>
                     
-                            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="black" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
@@ -36,6 +36,14 @@
         
                 <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
                 <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="order-1 absolute inset-x-0 z-20 px-6 py-4 transition-all duration-300 ease-in-out bg-white xl:bg-inherit dark:bg-gray-800 xl:mt-0 xl:p-0 xl:top-0 xl:relative xl:opacity-100 xl:translate-x-0 xl:flex xl:items-center xl:justify-between">
+                    <div class="flex justify-end pt-10">
+                        <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">                  
+                            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="black" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>                    
+                    
                     <div class="flex font-medium text-lg flex-col px-2 -mx-4 xl:flex-row xl:py-0">
                         <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-white hover:text-gray-900 dark:hover:bg-gray-700 xl:mx-2">Home</a>
                         <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-white hover:text-gray-900 dark:hover:bg-gray-700 xl:mx-2">About Us</a>
