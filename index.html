@@ -8,15 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-    </style>
-
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <!-- NavBar Section  -->
     <header class="container mx-auto px-4 lg:px-8">
@@ -717,7 +711,7 @@
 
             </div>  
         </section>
-        
+
         <!-- Why Choose Us Section  -->
         <section class="section5-why-us-features">
             <div class="features-container flex flex-col gap-12 justify-center items-center py-32">
@@ -854,15 +848,69 @@
                 
                 </div>
         </section>
-
-
-
     </div>
 
-    <footer>
-        <div class="footer1"></div>
-        <div class="footer2"></div>
-        <div class="footer3"></div>
+    <!-- Footer Section  -->
+    <footer class="py-9 bg-black text-white flex flex-col gap-6 justify-center items-center">
+        
+        <!-- Footer Branding  -->
+        <div class="footer1">
+            <!-- Logo Branding  -->
+            <div class="md:order-2 flex gap-4 items-center justify-between">
+                <a href="#" class="flex md:order-2 items-center gap-4 md:text-white text-xl md:text-4xl font-bold">
+                    <img class="shrink-0 w-[54.517px] h-[60px]" src="./images/logo.png" alt="Fruit Burst">
+                    Fruit Burst
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Menu  -->
+        <div class="footer2 px-9 max-w-md lg:max-w-2xl">
+            <ul class="flex flex-wrap gap-10 justify-center">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">All Fruits</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">My Account</a></li>
+            </ul>
+        </div>
+
+        <!-- Footer Social Media Icon  -->
+        <div class="footer3 px-9 max-w-md lg:max-w-2xl flex flex-wrap gap-10 justify-center">
+            <div class="social-icon0footer"><a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <g clip-path="url(#clip0_43_534)">
+                      <path d="M23.2757 5.39947C22.4101 5.77916 21.4878 6.03083 20.5262 6.15302C21.5155 5.5624 22.2705 4.63429 22.6254 3.5156C21.7031 4.06549 20.6848 4.4539 19.5996 4.67065C18.7238 3.73817 17.4757 3.16064 16.114 3.16064C13.4723 3.16064 11.3454 5.30492 11.3454 7.93361C11.3454 8.31184 11.3774 8.67552 11.456 9.02175C7.48895 8.82827 3.97869 6.92694 1.62057 4.03057C1.20888 4.74485 0.967395 5.5624 0.967395 6.44251C0.967395 8.09509 1.81841 9.56 3.08694 10.4081C2.32029 10.3936 1.5682 10.171 0.931027 9.8204C0.931027 9.83494 0.931027 9.85386 0.931027 9.87277C0.931027 12.1916 2.58505 14.1177 4.75406 14.5614C4.36564 14.6676 3.94232 14.7185 3.50299 14.7185C3.1975 14.7185 2.88909 14.701 2.5996 14.637C3.21786 16.5267 4.97227 17.916 7.05835 17.9611C5.43487 19.231 3.37352 19.9962 1.14196 19.9962C0.750641 19.9962 0.37532 19.9788 0 19.9308C2.11372 21.2938 4.61877 22.0721 7.3202 22.0721C16.1009 22.0721 20.9016 14.7985 20.9016 8.49368C20.9016 8.28275 20.8943 8.07909 20.8841 7.87688C21.8311 7.20479 22.6269 6.36541 23.2757 5.39947Z" fill="white"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_43_534">
+                        <rect width="23.2757" height="23.2757" fill="white" transform="translate(0 0.97876)"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+            </a></div>
+            <div class="social-icon0footer"><a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path d="M21.564 21.927V21.9263H21.5686V15.0972C21.5686 11.7565 20.8494 9.18286 16.9438 9.18286C15.0661 9.18286 13.8062 10.2133 13.2918 11.1899H13.2376V9.49476H9.53442V21.9263H13.3905V15.7706C13.3905 14.1499 13.6977 12.5825 15.7048 12.5825C17.6825 12.5825 17.7119 14.4322 17.7119 15.8744V21.927H21.564Z" fill="white"/>
+                    <path d="M3.2561 9.49536H7.11684V21.9269H3.2561V9.49536Z" fill="white"/>
+                    <path d="M5.18458 3.3064C3.95004 3.3064 2.94849 4.30795 2.94849 5.54249C2.94849 6.77703 3.95004 7.79953 5.18458 7.79953C6.41912 7.79953 7.42067 6.77703 7.42067 5.54249C7.41974 4.30795 6.41819 3.3064 5.18458 3.3064Z" fill="white"/>
+                  </svg>
+            </a></div>
+            <div class="social-icon0footer"><a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <g clip-path="url(#clip0_43_556)">
+                      <path d="M16.7262 0.97876C15.4853 1.06459 14.035 1.85887 13.1898 2.89317C12.4188 3.83147 11.7845 5.22509 12.0318 6.57944C13.3876 6.62162 14.7885 5.80843 15.6003 4.75667C16.3596 3.77764 16.9342 2.39275 16.7262 0.97876Z" fill="white"/>
+                      <path d="M21.6295 8.78753C20.438 7.29353 18.7637 6.42651 17.1824 6.42651C15.0949 6.42651 14.2118 7.42591 12.7615 7.42591C11.266 7.42591 10.1299 6.42942 8.32459 6.42942C6.55128 6.42942 4.66305 7.51319 3.46582 9.3665C1.78271 11.9763 2.07074 16.883 4.79834 21.0625C5.77446 22.5579 7.07789 24.2396 8.78282 24.2541C10.3001 24.2687 10.7278 23.2809 12.7833 23.2707C14.8388 23.2591 15.2287 24.2672 16.7431 24.2512C18.4494 24.2381 19.8242 22.3746 20.8003 20.8792C21.5 19.807 21.7604 19.2673 22.303 18.057C18.3563 16.5543 17.7235 10.942 21.6295 8.78753Z" fill="white"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_43_556">
+                        <rect width="23.2757" height="23.2757" fill="white" transform="translate(0.724609 0.978516)"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+            </a></div>
+        </div>
     </footer>
 </body>
 </html>
