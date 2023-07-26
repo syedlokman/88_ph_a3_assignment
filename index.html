@@ -19,9 +19,9 @@
 </head>
 <body>
     <!-- NavBar Section  -->
-    <header>
-        <nav x-data="{ isOpen: false }" class="relative mx-5 bg-white dark:bg-gray-800">
-            <div class="container mt-12 px-8 md:px-12 py-8 mx-auto md:bg-[#F85559] md:rounded-full flex items-center justify-between">
+    <header class="container mx-auto px-4 lg:px-8">
+        <nav x-data="{ isOpen: false }" class="relative bg-white dark:bg-gray-800">
+            <div class=" md:mt-12 md:px-12 py-8 mx-auto md:bg-[#F85559] md:rounded-full flex items-center justify-between">
                 
                 <!-- Logo Branding  -->
                 <div class="md:order-2 flex gap-4 items-center justify-between">
@@ -85,21 +85,19 @@
         </nav>
     </header>
 
-
-
-
-    <div class="container mt:8 md:mt-12  mx-auto">
+    <!-- HomePage Sections -->
+    <div class="container mx-auto px-4 lg:px-8 mt:8 md:mt-12">
 
         <!-- Hero Slider Section  -->
-        <section class="section1-hero-slider px-8 xl:px-0">
+        <section class="section1-hero-slider">
             <div class="carousel w-full rounded-lg">
 
                 <!-- Slide Item 1 -->
                 <div id="slide1" class="carousel-item relative w-full">
-                    <div class="hero w-full" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
-                        <div class="hero-overlay bg-opacity-70"></div>
+                    <div class="hero w-full" style="background-image: url(./images/banner1.png);">
+                        <div class="hero-overlay bg-opacity-80"></div>
                         <div class="hero-content text-center text-white w-full">
-                            <div class="max-w-3xl px-4 py-2 md:py-10 lg:pb-52">
+                            <div class="max-w-3xl px-4 py-2 md:py-10 md:pb-52">
                                 <h1 class="mb-5 text-2xl md:text-5xl lg:text-7xl font-bold">Exotic tastes at your doorstep</h1>
                                 <p class="mb-5 text-xl lg:text-2xl ">We supply highly quality organic products</p>
                                 <button class="btn flex-nowrap py-2 px-4 text-md lg:text-xl lg:py-5 lg:px-8 border-none text-white bg-[#F85559] font-extrabold hover:text-black">Shop Now</button>
@@ -114,64 +112,97 @@
 
                 <!-- Slide Item 2 -->
                 <div id="slide2" class="carousel-item relative w-full">
-                    <div class="hero w-full" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
-                        <div class="hero-overlay bg-opacity-60"></div>
-                        <div class="hero-content text-center text-neutral-content">
-                            <div class="">
-                            <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your doorstep</h1>
-                            <p class="mb-5">We supply highly quality organic products</p>
-                            <button class="btn border-none text-white bg-[#F85559] text-lg font-extrabold hover:text-black">Shop Now</button>
+                    <div class="hero w-full" style="background-image: url(./images/banner2.png);">
+                        <div class="hero-overlay bg-opacity-80"></div>
+                        <div class="hero-content text-center text-white w-full md:pb-52">
+                            <div class="max-w-3xl px-4 py-2 md:py-10">
+                                <h1 class="mb-5 text-2xl md:text-5xl lg:text-7xl font-bold">Exotic tastes at your doorstep</h1>
+                                <p class="mb-5 text-xl lg:text-2xl ">We supply highly quality organic products</p>
+                                <button class="btn flex-nowrap py-2 px-4 text-md lg:text-xl lg:py-5 lg:px-8 border-none text-white bg-[#F85559] font-extrabold hover:text-black">Shop Now</button>
                             </div>
                         </div>
                     </div>
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" class="btn btn-circle btn-neutral">❮</a> 
-                        <a href="#slide3" class="btn btn-circle btn-neutral">❯</a>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-4 right-4 top-1/2">
+                        <a href="#slide1" class="btn btn-xs md:btn-md lg:btn-lg btn-circle btn-neutral">❮</a> 
+                        <a href="#slide3" class="btn btn-xs md:btn-md lg:btn-lg btn-circle btn-neutral">❯</a>
                     </div>
                 </div> 
 
                 <!-- Slide Item 3 -->
                 <div id="slide3" class="carousel-item relative w-full">
-                    <div class="hero w-full" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
-                        <div class="hero-overlay bg-opacity-60"></div>
-                        <div class="hero-content text-center text-neutral-content">
-                            <div class="">
-                            <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your doorstep</h1>
-                            <p class="mb-5">We supply highly quality organic products</p>
-                            <button class="btn border-none text-white bg-[#F85559] text-lg font-extrabold hover:text-black">Shop Now</button>
+                    <div class="hero w-full" style="background-image: url(./images/banner3.png);">
+                        <div class="hero-overlay bg-opacity-80"></div>
+                        <div class="hero-content text-center text-white w-full md:pb-52">
+                            <div class="max-w-3xl px-4 py-2 md:py-10">
+                                <h1 class="mb-5 text-2xl md:text-5xl lg:text-7xl font-bold">Exotic tastes at your doorstep</h1>
+                                <p class="mb-5 text-xl lg:text-2xl ">We supply highly quality organic products</p>
+                                <button class="btn flex-nowrap py-2 px-4 text-md lg:text-xl lg:py-5 lg:px-8 border-none text-white bg-[#F85559] font-extrabold hover:text-black">Shop Now</button>
                             </div>
                         </div>
                     </div>
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" class="btn btn-circle btn-neutral">❮</a> 
-                        <a href="#slide4" class="btn btn-circle btn-neutral">❯</a>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-4 right-4 top-1/2">
+                        <a href="#slide2" class="btn btn-xs md:btn-md lg:btn-lg btn-circle btn-neutral">❮</a> 
+                        <a href="#slide4" class="btn btn-xs md:btn-md lg:btn-lg btn-circle btn-neutral">❯</a>
                     </div>
                 </div> 
 
                 <!-- Slide Item 4 -->
                 <div id="slide4" class="carousel-item relative w-full">
-                    <div class="hero w-full" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
-                        <div class="hero-overlay bg-opacity-60"></div>
-                        <div class="hero-content text-center text-neutral-content">
-                            <div class="">
-                            <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your doorstep</h1>
-                            <p class="mb-5">We supply highly quality organic products</p>
-                            <button class="btn border-none text-white bg-[#F85559] text-lg font-extrabold hover:text-black">Shop Now</button>
+                    <div class="hero w-full" style="background-image: url(./images/banner4.png);">
+                        <div class="hero-overlay bg-opacity-80"></div>
+                        <div class="hero-content text-center text-white w-full md:pb-52">
+                            <div class="max-w-3xl px-4 py-2 md:py-10">
+                                <h1 class="mb-5 text-2xl md:text-5xl lg:text-7xl font-bold">Exotic tastes at your doorstep</h1>
+                                <p class="mb-5 text-xl lg:text-2xl ">We supply highly quality organic products</p>
+                                <button class="btn flex-nowrap py-2 px-4 text-md lg:text-xl lg:py-5 lg:px-8 border-none text-white bg-[#F85559] font-extrabold hover:text-black">Shop Now</button>
                             </div>
                         </div>
                     </div>
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide3" class="btn btn-circle btn-neutral">❮</a> 
-                        <a href="#slide1" class="btn btn-circle btn-neutral">❯</a>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-4 right-4 top-1/2">
+                        <a href="#slide3" class="btn btn-xs md:btn-md lg:btn-lg btn-circle btn-neutral">❮</a> 
+                        <a href="#slide1" class="btn btn-xs md:btn-md lg:btn-lg btn-circle btn-neutral">❯</a>
                     </div>
-                </div>
+                </div> 
               </div>
+        </section>
+
+        <!-- Fruit Portfolio Section  -->
+        <section class="hidden relative md:flex justify-center mb-40">
+            <div class="fruits-container absolute bg-white shadow-md -top-32 mx-4 p-4 lg:py-12 lg:px-16 md:grid grid-cols-5 gap-10 xl:gap-20 justify-center items-start w-12/12 lg:w-10/12 section2-fruit-types">
+                <div class="fruit-items flex flex-col gap-4 text-center">
+                    <div class="fruit-img flex justify-center">
+                        <img class="h-28" src="./images/fruit1.png" alt="Grapes"></div>
+                    <p class="text-xl font-medium">Grapes</p>
+                </div>
+                <div class="fruit-items flex flex-col gap-4 text-center">
+                    <div class="fruit-img flex justify-center">
+                        <img class="h-28" src="./images/fruit2.png" alt="Orange"></div>
+                    <p class="text-xl font-medium">Orange</p>
+                </div>
+                <div class="fruit-items flex flex-col gap-4 text-center">
+                    <div class="fruit-img flex justify-center">
+                        <img class="h-28" src="./images/fruit3.png" alt="Mango"></div>
+                    <p class="text-xl font-medium">Mango</p>
+                </div>
+                <div class="fruit-items flex flex-col gap-4 text-center">
+                    <div class="fruit-img flex justify-center">
+                        <img class="h-28" src="./images/fruit4.png" alt="Strawberry"></div>
+                    <p class="text-xl font-medium">Strawberry</p>
+                </div>
+                <div class="fruit-items flex flex-col gap-4 text-center">
+                    <div class="fruit-img flex justify-center">
+                        <img class="h-28" src="./images/fruit5.png" alt="Dragon Fruit"></div>
+                    <p class="text-xl font-medium">Dragon Fruit</p>
+                </div>
+            </div>
         </section>
 
 
 
-        <section class="section2"></section>
         <section class="section3"></section>
+
+
+
         <section class="section4"></section>
     </div>
 
