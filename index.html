@@ -14,7 +14,7 @@
 <body>
     <!-- NavBar Section  -->
     <header class="container mx-auto px-4 lg:px-8">
-        <nav x-data="{ isOpen: false }" class="relative bg-white dark:bg-gray-800">
+        <nav x-data="{ isOpen: false }" class="relative bg-white">
             <div class=" md:mt-12 md:px-12 py-8 mx-auto md:bg-[#F85559] md:rounded-full flex items-center justify-between">
                 
                 <!-- Logo Branding  -->
@@ -27,7 +27,7 @@
         
                 <!-- Mobile menu button -->
                 <div class="flex md:order-1 xl:hidden">
-                    <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                    <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">
                         <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-black stroke-2 md:stroke-white" fill="none" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
                         </svg>
@@ -36,10 +36,10 @@
                 
         
                 <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-                <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="order-1 absolute top-0 inset-x-0 z-20 px-6 transition-all duration-300 ease-in-out bg-white xl:bg-inherit dark:bg-gray-800 xl:mt-0 xl:p-0 xl:top-0 xl:relative xl:opacity-100 xl:translate-x-0 xl:flex xl:items-center xl:justify-between">
+                <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="order-1 absolute top-0 inset-x-0 z-20 px-6 transition-all duration-300 ease-in-out bg-white xl:bg-inherit xl:mt-0 xl:p-0 xl:top-0 xl:relative xl:opacity-100 xl:translate-x-0 xl:flex xl:items-center xl:justify-between">
                     
                     <div class="flex justify-end mt-10">
-                        <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">                  
+                        <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="toggle menu">                  
                             <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="black" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
@@ -47,15 +47,15 @@
                     </div>                    
                     
                     <div class="flex flex-col font-medium text-lg px-2 -mx-4 xl:flex-row xl:py-0">
-                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-white hover:text-gray-900 dark:hover:bg-gray-700 xl:mx-2">Home</a>
-                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-white hover:text-gray-900 dark:hover:bg-gray-700 xl:mx-2">About Us</a>
-                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-white hover:text-gray-900 dark:hover:bg-gray-700 xl:mx-2">Shop</a>
-                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-white hover:text-gray-900 dark:hover:bg-gray-700 xl:mx-2">All Fruits</a>
+                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-gray-900 xl:mx-2">Home</a>
+                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-gray-900 xl:mx-2">About Us</a>
+                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-gray-900 xl:mx-2">Shop</a>
+                        <a href="#" class="px-2.5 py-2 xl:text-white transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-gray-900 xl:mx-2">All Fruits</a>
                     </div>
         
                     <!-- Search Bar for Small Device  -->
                     <div class="relative mt-4 md:hidden">                      
-                        <input type="text" class="w-full py-2 pl-4 pr-10 text-gray-700 bg-white border rounded-full dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search">
+                        <input type="text" class="w-full py-2 pl-4 pr-10 text-gray-700 bg-white border rounded-full focus:border-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search">
     
                         <span class="absolute inset-y-0 right-0 flex items-center pr-3">
                             <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
@@ -67,7 +67,7 @@
 
                 <!-- Search Bar from Medium Device  -->
                 <div class="order-3 relative hidden md:block md:mt-0">                      
-                    <input type="text" class="w-full py-4 pl-4 pr-10 text-gray-700 font-normal text-base bg-white rounded-full dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search here">
+                    <input type="text" class="w-full py-4 pl-4 pr-10 text-gray-700 font-normal text-base bg-white rounded-full focus:border-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search here">
 
                     <span class="absolute inset-y-0 right-0 flex items-center pr-3">
                         <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
